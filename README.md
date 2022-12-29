@@ -1,6 +1,6 @@
 # PokéApi Connection
 
-This is an app made to practice public APIs connections. On this app you can search for
+This is an app made to practice public APIs connections with Ruby on Rails. On this app you can search for
 a pokémon by name or id and you will get an entry with the infromation of that pokémon
 
 ![img](app/assets/images/pokedex.PNG)
