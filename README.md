@@ -1,24 +1,32 @@
-# README
+# PokéApi Connection
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an app made to practice public APIs connections. On this app you can search for
+a pokémon by name or id and you will get an entry with the infromation of that pokémon
 
-Things you may want to cover:
+## Getting started
 
-* Ruby version
+To get started with the app, clone the repo and then install the needed gems:
 
-* System dependencies
+```
+$ gem install bundler -v 2.3.14
+$ bundle _2.3.14_ config set --local without 'production'
+$ bundle _2.3.14_ install
+```
 
-* Configuration
+Next, migrate the database:
 
-* Database creation
+```
+$ rails db:migrate
+```
 
-* Database initialization
+Finally, run the test suite to verify that everything is working correctly:
 
-* How to run the test suite
+```
+$ rails test
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+If the test suite passes, you'll be ready to run the app in a local server:
 
-* Deployment instructions
-
-* ...
+```
+$ rails server
+```
