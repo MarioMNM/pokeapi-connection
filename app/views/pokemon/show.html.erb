@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Pokédex</title>
+      <link rel="stylesheet" href="app/assets/stylesheets/main.css">
+  </head>
+  <body style="background-color:#922B21;    
+             padding-top: 120px;
+             justify-content: center;">
+    <main>
+      <%= render 'search_form' %>
+      <div class="pokemon">
+        <p class="pokemon-id-back"><%= @pokemon['id'] %></p>
+        <div class="pokemon-imagen">
+          <img src="<%= @pokemon['sprites']['front_default'] %>">
+        </div>
+        <div class="pokemon-info">
+            <div class="nombre-contenedor">
+                <p class="pokemon-id"><%= @pokemon['id'] %></p>
+                <h2 class="pokemon-nombre"><%= @pokemon['name'].capitalize %></h2>
+            </div>
+            <div class="pokemon-tipos">
+              <% @pokemon['types'].each do |pokemon_type| %>
+                <p class="<%= pokemon_type['type']['name']%> tipo"><%= pokemon_type['type']['name'].upcase %>
+              <% end %>
+            </div>
+            <div class="pokemon-stats">
+                <p class="stat"><%= @pokemon['height'] %>m</p>
+                <p class="stat"><%= @pokemon['weight'] %>kg</p>
+            </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
